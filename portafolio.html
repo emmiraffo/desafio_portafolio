@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio — Emmi Carolina Raffo Contreras</title>
+  <meta name="description" content="Portafolio de proyectos de Emmi Carolina Raffo Contreras." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Estilos específicos para el layout del portafolio -->
+  <style>
+    .portfolio-header { max-width:980px; margin:0 auto; padding: var(--space-4) var(--space-3) var(--space-3); }
+    .portfolio-header h1 { font-size:1.6rem; margin-bottom:6px; }
+    .portfolio-header p  { color:var(--muted); }
+
+    .cards {
+      max-width: 980px;
+      margin: 0 auto var(--space-4);
+      padding: 0 var(--space-3);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: var(--space-3);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+      display:block;
+    }
+
+    .card-body {
+      padding: var(--space-3);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      min-height: 44px; /* equilibra alturas entre tarjetas */
+    }
+
+    .tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    .tags li {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.85rem;
+      color: #4b5563;
+      background: var(--surface);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* Opcional: compactar un poco más en pantallas pequeñas */
+    @media (max-width: 380px){
+      .card p { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header y navegación -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#experiencia">Experiencia</a>
+      <a href="index.html#educacion">Educación</a>
+      <a href="portafolio.html" aria-current="page">Portafolio</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="portfolio-header">
+      <h1>Portafolio de Proyectos</h1>
+      <p>Selección de trabajos y prácticas desarrolladas.</p>
+    </div>
+  </header>
+
+  <!-- Grilla de proyectos -->
+  <main class="cards">
+    <!-- Proyecto 1 -->
+    <article class="card">
+      <img src="asset/capture_desafio.png" alt="Captura del CV en HTML/CSS" />
+      <div class="card-body">
+        <h3>Currículum en HTML/CSS</h3>
+        <p>Página de CV estructurada y estilizada conforme a la rúbrica (nav, educación, experiencia, footer).</p>
+        <ul class="tags">
+          <li>HTML</li><li>CSS</li><li>Semántica</li>
+        </ul>
+  
+      </div>
+    </article>
+
+    <!-- Proyecto 2 -->
+    <article class="card">
+      <img src="asset/proyecto2.png" alt="Captura del Proyecto 2" />
+      <div class="card-body">
+        <h3>Pastelería</h3>
+        <p>Aplicación web para la gestión de pedidos y productos de una pastelería.</p>
+        <ul class="tags">
+          <li>HTML</li><li>CSS</li><li>Fetch</li>
+        </ul>
+   
+      </div>
+    </article>
+
+    <!-- Proyecto 3 -->
+    <article class="card">
+      <img src="asset/proyecto3.png" alt="Captura del Proyecto 3" />
+      <div class="card-body">
+        <h3>Iguana Page</h3>
+        <ul class="tags">
+          <li>HTML</li><li>CSS</li><li>Semántica</li>
+        </ul>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 Emmi Carolina Raffo Contreras · Actualizado en agosto 2025</small>
+  </footer>
+</body>
+</html>
